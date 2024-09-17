@@ -4,10 +4,10 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import Alert from './components/Alert';
 import React, { useState } from 'react';
-// import {
-//   Routes,
-//   Route
-// } from 'react-router-dom';
+import {
+  Routes,
+  Route
+} from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState('success');
@@ -40,13 +40,13 @@ function App() {
       <NavBar title="TextUtils" aboutText="About TextUtils" mode={mode} />
       <Alert alert={alert} />
       {/* <button className='btn btn-primary' onClick={pickColor}>Click here</button> */}
-      <TextForm />
-      {/* <Routes>
+      {/* <TextForm /> */}
+      <Routes>
         <Route exact path="/textform" element={<TextForm />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/textform" element={<TextForm />} />
         <Route exact path="/navbar" element={<NavBar title="TextUtils" aboutText="About TextUtils" mode={mode} />} />
-      </Routes> */}
+      </Routes>
     </>
   );
 }
