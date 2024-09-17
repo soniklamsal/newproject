@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function NavBar({ title = "TextUtilsD", aboutText = "About UsD", mode = "light" }) {
   return (
     <nav className={`navbar bg-${mode}`} data-bs-theme="dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">{title}</Link> {/* Use Link instead of a tag */}
+        <a className="navbar-brand" href="#">{title}</a> {/* Use Link instead of a tag */}
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <a className="nav-link" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">{aboutText}</Link>
+              <a className="nav-link" to="#">{aboutText}</a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/textform">textform</Link>
+              <a className="nav-link" href="#">textform</a>
             </li>
           </ul>
           <form className="d-flex" role="search">
